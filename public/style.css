@@ -30,7 +30,6 @@ body {
 .logo img,
 .logo-img {
     height: 80px;
-    /* adjust as needed */
     width: auto;
     object-fit: contain;
     display: block;
@@ -129,41 +128,6 @@ body {
     grid-row: 2;
 }
 
-@media (max-width: 768px) {
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-text {
-        text-align: center;
-    }
-
-    .hero-text h1 {
-        display: block;
-        text-align: center;
-    }
-
-    .hero-text h1::before {
-        display: none;
-    }
-    
-    .hero-text p {
-        margin-left: 0;
-        text-align: center;
-    }
-    
-    .hero-text .btn {
-        margin: 0.5rem auto;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        width: 80%;
-        max-width: 300px;
-        text-align: center;
-    }
-}
-
 .hero-text p {
     font-size: 1.25rem;
     margin-bottom: 1.5rem;
@@ -177,63 +141,6 @@ body {
     width: 100%;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(255, 0, 0, 0.5);
-}
-
-@media (max-width: 900px) {
-    .hero {
-        padding: 80px 1rem;
-    }
-
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-        padding: 0;
-    }
-
-    .hero-text {
-        text-align: center;
-    }
-
-    .hero-text h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero-text p {
-        font-size: 1rem;
-        margin-left: 0;
-    }
-    
-    .hero-text .btn {
-        margin: 0.5rem auto;
-        margin-left: 0;
-        display: block;
-        width: 80%;
-        max-width: 300px;
-        text-align: center;
-    }
-
-    .hero-image img {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-text h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero-text p {
-        font-size: 0.9rem;
-        margin-left: 0;
-    }
-    
-    .hero-text .btn {
-        width: 90%;
-        font-size: 0.95rem;
-        padding: 0.7rem 1.2rem;
-        margin: 0.5rem auto;
-        margin-left: 0;
-    }
 }
 
 .btn {
@@ -264,11 +171,11 @@ body {
 }
 
 /* View full inventory button centering */
-.featured > div {
+.featured>div {
     text-align: center;
 }
 
-.featured > div .btn {
+.featured>div .btn {
     margin: 0 auto;
 }
 
@@ -369,25 +276,6 @@ body {
     font-size: 0.85rem;
 }
 
-@media (max-width: 768px) {
-    .status-badge {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.8rem;
-    }
-    
-    .main-image .status-badge {
-        top: 10px;
-        right: 10px;
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
-    }
-
-    .car-grid {
-        grid-template-columns: 1fr;
-        padding: 0 1rem;
-    }
-}
-
 /* Inventory Page */
 .inventory-page {
     padding: 7rem 1rem 4rem 1rem;
@@ -400,16 +288,6 @@ body {
     margin-bottom: 2rem;
     word-wrap: break-word;
     padding: 0 1rem;
-}
-
-@media (max-width: 768px) {
-    .inventory-page {
-        padding: 6rem 1rem 3rem 1rem;
-    }
-
-    .inventory-page h1 {
-        font-size: 1.8rem;
-    }
 }
 
 /* Footer */
@@ -465,68 +343,6 @@ body {
     font-size: 0.8rem;
     color: #ffffff;
     padding: 0 1rem;
-}
-
-@media (max-width: 768px) {
-    .footer-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-}
-
-/* Mobile Menu */
-@media (max-width: 768px) {
-    .header {
-        padding: 1rem;
-        align-items: center;
-    }
-
-    .logo {
-        font-size: 1.2rem;
-    }
-    
-    .menu-toggle {
-        align-self: center;
-        margin-top: 0;
-    }
-
-    .nav {
-        display: flex;
-        flex-direction: column;
-        background: rgb(255, 0, 0);
-        position: fixed;
-        top: 62px;
-        right: 0;
-        width: 140px;
-        height: calc(100vh - 62px);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        transform: translateX(110%);
-        transition: transform 0.35s cubic-bezier(.2, .8, .2, 1), opacity 0.25s ease;
-        opacity: 0;
-        pointer-events: none;
-        z-index: 999;
-    }
-
-    .nav.active {
-        transform: translateX(0);
-        opacity: 1;
-        pointer-events: auto;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav a {
-        margin: 1rem;
-        text-align: center;
-        color: #fff;
-        padding: 0.5rem;
-    }
-
-    .nav a:hover {
-        color: rgb(0, 0, 0);
-    }
 }
 
 /* Car Details Page */
@@ -671,109 +487,6 @@ body {
     font-weight: 600;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .car-details {
-        padding: 6rem 1rem 3rem 1rem;
-        margin-top: 2rem;
-    }
-
-    .car-details-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .image-gallery {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .main-image img {
-        height: 250px;
-    }
-
-    .car-primary-info {
-        padding: 1.5rem;
-    }
-
-    .car-primary-info h1 {
-        font-size: 1.6rem;
-    }
-
-    .car-primary-info .price-large {
-        font-size: 1.8rem;
-    }
-
-    .car-primary-info .deposit-info {
-        font-size: 1.1rem;
-    }
-
-    .car-info {
-        padding: 0;
-    }
-
-    .car-info p strong {
-        min-width: 130px;
-    }
-}
-
-@media (max-width: 480px) {
-    .header {
-        padding: 0.75rem;
-    }
-
-    .logo {
-        font-size: 1rem;
-    }
-
-    .car-details {
-        padding: 5rem 0.5rem 2rem 0.5rem;
-    }
-
-    .main-image img {
-        height: 200px;
-    }
-
-    .car-primary-info {
-        padding: 1rem;
-    }
-
-    .car-primary-info h1 {
-        font-size: 1.4rem;
-    }
-
-    .car-primary-info .price-large {
-        font-size: 2rem;
-    }
-
-    .car-primary-info .deposit-info {
-        font-size: 1rem;
-    }
-
-    .car-primary-info .btn {
-        font-size: 1rem;
-        padding: 0.9rem 2rem;
-    }
-
-    .car-info p {
-        font-size: 0.95rem;
-    }
-
-    .car-info p strong {
-        min-width: 110px;
-        font-size: 0.95rem;
-    }
-
-    .thumbnail {
-        width: 45px;
-        height: 45px;
-    }
-
-    .thumbnail-container {
-        grid-template-columns: repeat(auto-fill, 45px);
-    }
-}
-
 /* About Page */
 .about {
     background: #000;
@@ -794,7 +507,7 @@ body {
     line-height: 1.7;
 }
 
-/* Services Section */
+/* Services Section - 3 card layout */
 .services {
     background: #fff;
     color: #111;
@@ -809,13 +522,11 @@ body {
 }
 
 .service-grid {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    max-width: 100%;
-    margin: auto;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .service-card {
@@ -823,7 +534,6 @@ body {
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
     transition: all 0.3s ease;
     text-align: center;
 }
@@ -980,24 +690,28 @@ body {
     color: #e11;
 }
 
-@media (max-width: 768px) {
-    .popup-content {
-        padding: 2rem;
-        width: 95%;
-    }
-    
-    .popup .close {
-        top: 15px;
-        right: 15px;
-        font-size: 1.5rem;
-    }
-}
-
 /* Contact Page Styles */
 .contact-section {
     padding: 7rem 2rem 4rem 2rem;
     background: #f9f9f9;
     min-height: 60vh;
+}
+
+/* Fix contact page hero stacking */
+.contact-section~.hero,
+section.hero[style*="background:#000"] {
+    display: block !important;
+    text-align: center;
+}
+
+section.hero[style*="background:#000"] h1 {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+section.hero[style*="background:#000"] p {
+    display: block;
+    margin-left: 0 !important;
 }
 
 .contact-container {
@@ -1063,17 +777,333 @@ body {
     font-size: 1.1rem;
 }
 
+/* ========================================
+   MOBILE RESPONSIVE STYLES
+   ======================================== */
+
+@media (max-width: 900px) {
+    .hero {
+        padding: 80px 1rem;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        margin-left: 0;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
-    .contact-section {
+
+    /* Hero section */
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        display: block;
+        text-align: center;
+    }
+
+    .hero-text h1::before {
+        display: none;
+    }
+
+    .hero-text p {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /* FIX 1: Center align hero buttons on mobile */
+    .hero-text .btn {
+        margin: 0.5rem auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block;
+        width: 80%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    /* Status badges */
+    .status-badge {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .main-image .status-badge {
+        top: 10px;
+        right: 10px;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .car-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    /* Inventory page */
+    .inventory-page {
         padding: 6rem 1rem 3rem 1rem;
     }
-    
-    .contact-container {
+
+    .inventory-page h1 {
+        font-size: 1.8rem;
+    }
+
+    /* FIX 2: Add top margin to car details page */
+    .car-details {
+        padding-top: 9rem !important;
+        margin-top: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 3rem;
+    }
+
+    .car-details-content {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
+
+    .image-gallery {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .main-image img {
+        height: 250px;
+    }
+
+    .car-primary-info {
+        padding: 1.5rem;
+    }
+
+    .car-primary-info h1 {
+        font-size: 1.6rem;
+    }
+
+    .car-primary-info .price-large {
+        font-size: 1.8rem;
+    }
+
+    .car-primary-info .deposit-info {
+        font-size: 1.1rem;
+    }
+
+    .car-info {
+        padding: 0;
+    }
+
+    .car-info p strong {
+        min-width: 130px;
+    }
+
+    /* Footer */
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    /* FIX 3: Hamburger menu alignment with logo */
+    .header {
+        padding: 1rem;
+        align-items: flex-end;
+        padding-bottom: 1rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        align-self: flex-end;
+        margin-bottom: 0.5rem;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        background: rgb(255, 0, 0);
+        position: fixed;
+        top: 62px;
+        right: 0;
+        width: 140px;
+        height: calc(100vh - 62px);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transform: translateX(110%);
+        transition: transform 0.35s cubic-bezier(.2, .8, .2, 1), opacity 0.25s ease;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 999;
+    }
+
+    .nav.active {
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .nav a {
+        margin: 1rem;
+        text-align: center;
+        color: #fff;
+        padding: 0.5rem;
+    }
+
+    .nav a:hover {
+        color: rgb(0, 0, 0);
+    }
+
+    /* FIX 4: Contact page responsive */
+    .contact-section {
+        padding: 6rem 1rem 3rem 1rem;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
     .contact-form {
         padding: 1.5rem;
+    }
+
+    .contact-info {
+        padding: 1.5rem !important;
+    }
+
+    /* FIX 5: Services grid stack on mobile */
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* FIX 6: Popup zoom fix and styling */
+    .popup {
+        padding: 1rem;
+    }
+
+    .popup-content {
+        padding: 2rem;
+        width: 90%;
+        max-width: 500px;
+    }
+
+    .popup .close {
+        top: 15px;
+        right: 15px;
+        font-size: 1.5rem;
+    }
+
+    /* Prevent zoom on input focus (iOS Safari) */
+    .popup-content input,
+    .popup-content textarea {
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0.75rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+        margin-left: 0;
+    }
+
+    .hero-text .btn {
+        width: 90%;
+        font-size: 0.95rem;
+        padding: 0.7rem 1.2rem;
+        margin: 0.5rem auto !important;
+        margin-left: auto !important;
+    }
+
+    .car-details {
+        padding-top: 8rem !important;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-bottom: 2rem;
+    }
+
+    .main-image img {
+        height: 200px;
+    }
+
+    .car-primary-info {
+        padding: 1rem;
+    }
+
+    .car-primary-info h1 {
+        font-size: 1.4rem;
+    }
+
+    .car-primary-info .price-large {
+        font-size: 2rem;
+    }
+
+    .car-primary-info .deposit-info {
+        font-size: 1rem;
+    }
+
+    .car-primary-info .btn {
+        font-size: 1rem;
+        padding: 0.9rem 2rem;
+    }
+
+    .car-info p {
+        font-size: 0.95rem;
+    }
+
+    .car-info p strong {
+        min-width: 110px;
+        font-size: 0.95rem;
+    }
+
+    .thumbnail {
+        width: 45px;
+        height: 45px;
+    }
+
+    .thumbnail-container {
+        grid-template-columns: repeat(auto-fill, 45px);
     }
 }
