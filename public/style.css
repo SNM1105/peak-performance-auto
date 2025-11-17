@@ -131,7 +131,6 @@ body {
 .hero-text p {
     font-size: 1.25rem;
     margin-bottom: 1.5rem;
-    margin-left: 57px;
     color: #ccc;
     word-wrap: break-word;
 }
@@ -140,7 +139,6 @@ body {
     max-width: 500px;
     width: 100%;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.5);
 }
 
 .btn {
@@ -153,7 +151,6 @@ body {
     transition: 0.3s;
     transition: transform 0.3s ease-in-out;
     margin: 0 0.5rem;
-    margin-left: 57px;
 }
 
 .btn:hover {
@@ -446,7 +443,7 @@ body {
 
 .car-primary-info .btn {
     margin: 0;
-    padding: 1rem 2.5rem;
+    padding: 1rem 0rem;
     font-size: 1.1rem;
     font-weight: 600;
     width: 100%;
