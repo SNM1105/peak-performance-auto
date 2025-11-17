@@ -15,7 +15,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0rem 2rem;
+    padding: 1rem 2rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     z-index: 1000;
@@ -25,15 +25,6 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     color: rgb(255, 255, 255);
-}
-
-.logo img,
-.logo-img {
-    height: 80px;
-    /* adjust as needed */
-    width: auto;
-    object-fit: contain;
-    display: block;
 }
 
 .nav a {
@@ -155,7 +146,8 @@ body {
 
     .hero-text .btn {
         margin: 0.5rem auto;
-        margin-left: 0;
+        margin-left: auto;
+        margin-right: auto;
         display: block;
         width: 80%;
         max-width: 300px;
@@ -175,6 +167,7 @@ body {
     max-width: 500px;
     width: 100%;
     border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.5);
 }
 
 @media (max-width: 900px) {
@@ -222,6 +215,15 @@ body {
 
     .hero-text p {
         font-size: 0.9rem;
+        margin-left: 0;
+    }
+
+    .hero-text .btn {
+        width: 90%;
+        font-size: 0.95rem;
+        padding: 0.7rem 1.2rem;
+        margin: 0.5rem auto;
+        margin-left: 0;
     }
 }
 
@@ -235,6 +237,7 @@ body {
     transition: 0.3s;
     transition: transform 0.3s ease-in-out;
     margin: 0 0.5rem;
+    margin-left: 57px;
 }
 
 .btn:hover {
@@ -286,7 +289,7 @@ body {
 .car-card {
     background: #fff;
     border: 2px solid rgb(0, 0, 0);
-    border-radius: 5px;
+    border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     text-align: left;
@@ -466,10 +469,16 @@ body {
 @media (max-width: 768px) {
     .header {
         padding: 1rem;
+        align-items: center;
     }
 
     .logo {
         font-size: 1.2rem;
+    }
+
+    .menu-toggle {
+        align-self: center;
+        margin-top: 0;
     }
 
     .nav {
@@ -541,7 +550,7 @@ body {
 
 .main-image img {
     width: 100%;
-    height: 270px;
+    height: 350px;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -580,7 +589,7 @@ body {
 /* Car primary info under image */
 .car-primary-info {
     margin-top: 1.5rem;
-    padding: 1rem;
+    padding: 2rem;
     background: #f9f9f9;
     border-radius: 10px;
     text-align: center;
@@ -589,7 +598,7 @@ body {
 
 .car-primary-info h1 {
     font-size: 2rem;
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 1.5rem 0;
     color: #222;
     word-wrap: break-word;
     font-weight: 700;
@@ -612,10 +621,10 @@ body {
 
 .car-primary-info .btn {
     margin: 0;
-    padding: 1rem 0rem;
+    padding: 1rem 2.5rem;
     font-size: 1.1rem;
     font-weight: 600;
-    width: 60%;
+    width: 100%;
     text-align: center;
 }
 
@@ -639,11 +648,11 @@ body {
 }
 
 .car-info p {
-    margin: 0.4rem 0;
+    margin: 0.5rem 0;
     color: #444;
     word-wrap: break-word;
-    line-height: 21px;
-    font-size: 20px;
+    line-height: 1.8;
+    font-size: 1rem;
 }
 
 .car-info p strong {
@@ -657,6 +666,7 @@ body {
 @media (max-width: 768px) {
     .car-details {
         padding: 6rem 1rem 3rem 1rem;
+        margin-top: 2rem;
     }
 
     .car-details-content {
@@ -733,7 +743,7 @@ body {
 
     .car-primary-info .btn {
         font-size: 1rem;
-        padding: 0.9rem 0rem;
+        padding: 0.9rem 2rem;
     }
 
     .car-info p {
@@ -790,36 +800,23 @@ body {
 }
 
 .service-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* 3 columns */
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
     gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-@media (max-width: 900px) {
-    .service-grid {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 columns on tablets */
-    }
-}
-
-@media (max-width: 600px) {
-    .service-grid {
-        grid-template-columns: 1fr;
-        /* 1 column on phones */
-    }
+    max-width: 100%;
+    margin: auto;
 }
 
 .service-card {
+    flex: 1 1 200px;
+    max-width: 250px;
     background: #f5f5f5;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
     transition: all 0.3s ease;
-    text-align: center;
 }
 
 .service-card:hover {
@@ -836,27 +833,6 @@ body {
 .service-card h3 {
     margin-bottom: 0.5rem;
     color: #111;
-}
-
-/* Best Value Deal Ribbon */
-.best-deal {
-    position: relative;
-}
-
-.deal-badge {
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    background: #d00;
-    color: #fff;
-    padding: 0.4rem 1rem;
-    font-weight: 700;
-    font-size: 0.85rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transform: rotate(-8deg);
-    letter-spacing: 0.5px;
-    z-index: 15;
 }
 
 /* Location Section */
@@ -907,16 +883,18 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    padding: 1rem;
 }
 
 .popup-content {
     background: #fff;
-    padding: 2rem;
-    border-radius: 12px;
+    padding: 2.5rem;
+    border-radius: 15px;
     width: 90%;
     max-width: 500px;
     position: relative;
     text-align: left;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .popup-content h2 {
@@ -926,62 +904,39 @@ body {
 
 .popup-content label {
     display: block;
-    margin-top: 1rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #333;
 }
 
 .popup-content input,
 .popup-content textarea {
     width: 100%;
-    padding: 0.7rem;
+    padding: 0.9rem;
     margin-top: 0.3rem;
-    border: 1px solid #ccc;
+    border: 2px solid #ddd;
     border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
 }
 
-.close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #555;
+.popup-content input:focus,
+.popup-content textarea:focus {
+    outline: none;
+    border-color: #e11;
 }
 
-/* Customer Info Modal */
-.customer-info-modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
+.popup-content .btn {
+    width: 100%;
+    margin: 1.5rem 0 0 0;
     padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
-.customer-info-content {
-    background: #fff;
-    padding: 2.5rem;
-    border-radius: 15px;
-    width: 90%;
-    max-width: 500px;
-    position: relative;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-}
-
-.customer-info-content h2 {
-    color: #e11;
-    margin-bottom: 0.5rem;
-    font-size: 1.8rem;
-}
-
-.customer-info-content p {
-    color: #666;
-    margin-bottom: 2rem;
-    font-size: 0.95rem;
-}
-
-.customer-info-content .close {
+.popup .close {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -991,19 +946,71 @@ body {
     transition: color 0.3s;
 }
 
-.customer-info-content .close:hover {
+.popup .close:hover {
     color: #e11;
 }
 
-.customer-info-form label {
-    display: block;
-    margin-top: 1.2rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 0.4rem;
+@media (max-width: 768px) {
+    .popup-content {
+        padding: 2rem;
+        width: 95%;
+    }
+
+    .popup .close {
+        top: 15px;
+        right: 15px;
+        font-size: 1.5rem;
+    }
 }
 
-.customer-info-form input {
+/* Contact Page Styles */
+.contact-section {
+    padding: 7rem 2rem 4rem 2rem;
+    background: #f9f9f9;
+    min-height: 60vh;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.contact-info h1 {
+    color: #e11;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+    margin: 1rem 0;
+    line-height: 1.8;
+}
+
+.contact-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    color: #e11;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 0.9rem;
     border: 2px solid #ddd;
@@ -1013,22 +1020,30 @@ body {
     box-sizing: border-box;
 }
 
-.customer-info-form input:focus {
+.contact-form input:focus,
+.contact-form textarea:focus {
     outline: none;
     border-color: #e11;
 }
 
-.customer-info-form .btn {
+.contact-form .btn {
     width: 100%;
-    margin: 2rem 0 0 0;
+    margin: 1.5rem 0 0 0;
     padding: 1rem;
     font-size: 1.1rem;
-    font-weight: 600;
 }
 
-.customer-info-form .error-message {
-    color: #e11;
-    font-size: 0.9rem;
-    margin-top: 0.3rem;
-    display: none;
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 6rem 1rem 3rem 1rem;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
 }
