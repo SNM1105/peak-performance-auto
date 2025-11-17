@@ -42,6 +42,52 @@ window.changeCarImage = function(imgSrc, thumbnail) {
   }
 }
 
+// ===== HOME PAGE FEATURED CARS (3 most recent) =====
+const featuredContainer = document.querySelector("#inventory .car-grid");
+if (featuredContainer) {
+  loadFeaturedCars();
+}
+
+async function loadFeaturedCars() {
+  try {
+    const { data: cars, error } = await supabaseClient
+      .from('cars')
+      .select('*')
+      .eq('status', 'available')  // Only show available cars
+      .order('created_at', { ascending: false })
+      .limit(3);
+
+    if (error) {
+      console.error('Error fetching featured cars:', error);
+      featuredContainer.innerHTML = '<p style="text-align:center; color:red; grid-column: 1/-1;">Error loading vehicles</p>';
+      return;
+    }
+
+    if (!cars || cars.length === 0) {
+      featuredContainer.innerHTML = '<p style="text-align:center; grid-column: 1/-1;">No vehicles available</p>';
+      return;
+    }
+
+    featuredContainer.innerHTML = cars
+      .map(car => `
+        <div class="car-card">
+          <div class="car-image-container">
+            <img src="${car.image || 'https://via.placeholder.com/400x300?text=No+Image'}" alt="${car.name}">
+            ${getStatusBadge(car.status)}
+          </div>
+          <h3>${car.name}</h3>
+          <p><strong>Price:</strong> ${formatPrice(car.price)}</p>
+          <p><strong>Mileage:</strong> ${car.mileage ? car.mileage.toLocaleString() + ' km' : 'N/A'}</p>
+          <a href="car.html?id=${car.id}" class="btn small">View Details</a>
+        </div>
+      `)
+      .join("");
+  } catch (err) {
+    console.error('Unexpected error:', err);
+    featuredContainer.innerHTML = '<p style="text-align:center; color:red; grid-column: 1/-1;">Failed to load vehicles</p>';
+  }
+}
+
 // ===== INVENTORY PAGE (fetch from Supabase) =====
 const inventoryContainer = document.getElementById("inventory-list");
 if (inventoryContainer) {
