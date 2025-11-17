@@ -27,6 +27,15 @@ body {
     color: rgb(255, 255, 255);
 }
 
+.logo img,
+.logo-img {
+    height: 80px;
+    /* adjust as needed */
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
 .nav a {
     text-decoration: none;
     color: #ffffff;
@@ -138,12 +147,12 @@ body {
     .hero-text h1::before {
         display: none;
     }
-
+    
     .hero-text p {
         margin-left: 0;
         text-align: center;
     }
-
+    
     .hero-text .btn {
         margin: 0.5rem auto;
         margin-left: auto;
@@ -193,7 +202,7 @@ body {
         font-size: 1rem;
         margin-left: 0;
     }
-
+    
     .hero-text .btn {
         margin: 0.5rem auto;
         margin-left: 0;
@@ -217,7 +226,7 @@ body {
         font-size: 0.9rem;
         margin-left: 0;
     }
-
+    
     .hero-text .btn {
         width: 90%;
         font-size: 0.95rem;
@@ -255,11 +264,11 @@ body {
 }
 
 /* View full inventory button centering */
-.featured>div {
+.featured > div {
     text-align: center;
 }
 
-.featured>div .btn {
+.featured > div .btn {
     margin: 0 auto;
 }
 
@@ -365,7 +374,7 @@ body {
         padding: 0.4rem 0.8rem;
         font-size: 0.8rem;
     }
-
+    
     .main-image .status-badge {
         top: 10px;
         right: 10px;
@@ -475,7 +484,7 @@ body {
     .logo {
         font-size: 1.2rem;
     }
-
+    
     .menu-toggle {
         align-self: center;
         margin-top: 0;
@@ -810,13 +819,13 @@ body {
 }
 
 .service-card {
-    flex: 1 1 200px;
-    max-width: 250px;
     background: #f5f5f5;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
     transition: all 0.3s ease;
+    text-align: center;
 }
 
 .service-card:hover {
@@ -833,6 +842,27 @@ body {
 .service-card h3 {
     margin-bottom: 0.5rem;
     color: #111;
+}
+
+/* Best Value Deal Ribbon */
+.best-deal {
+    position: relative;
+}
+
+.deal-badge {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background: #d00;
+    color: #fff;
+    padding: 0.4rem 1rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: rotate(-8deg);
+    letter-spacing: 0.5px;
+    z-index: 15;
 }
 
 /* Location Section */
@@ -955,7 +985,7 @@ body {
         padding: 2rem;
         width: 95%;
     }
-
+    
     .popup .close {
         top: 15px;
         right: 15px;
@@ -1037,12 +1067,12 @@ body {
     .contact-section {
         padding: 6rem 1rem 3rem 1rem;
     }
-
+    
     .contact-container {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-
+    
     .contact-form {
         padding: 1.5rem;
     }
