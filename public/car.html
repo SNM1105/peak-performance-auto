@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Details | Peak Performance Auto</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img\peak_logo.png" alt="Peak Performance Auto Logo" class="logo-img">
+            </a>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="about.html" class="active">Repair</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+    </header>
+
+    <section class="car-details" id="car-details">
+        <!-- JS will populate this section -->
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <h4>About Peak Performance Auto</h4>
+                <p>Your trusted dealership for quality vehicles and transparent service.</p>
+            </div>
+
+            <div>
+                <h4>Privacy & Terms</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Contact</h4>
+                <p><i class="fas fa-phone"></i> (514) 402-5556</p>
+                <p><i class="fas fa-envelope"></i> info@peakperformanceauto.ca</p>
+            </div>
+        </div>
+        <p class="copyright">© 2025 Peak Performance Auto. All rights reserved.</p>
+    </footer>
+
+    <script src="supabase-config.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peak Performance Auto</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img\peak_logo.png" alt="Peak Performance Auto Logo" class="logo-img">
+            </a>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="about.html">Repair</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>
+                    <span>Find Your Next Vehicle</span>
+                    <span>Repair Your Car</span>
+                </h1>
+                <p>Browse our selection of cars available for reservation</p>
+                <p>Schedule your service appointment with our expert mechanics</p>
+                <!-- now links to the separate inventory page -->
+                <a href="inventory.html" class="btn">VIEW INVENTORY</a>
+                <a href="about.html" class="btn">BOOK A SERVICE</a>
+            </div>
+            <div class="hero-image">
+                <img src="img\peak_logo.png" alt="logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Cars (links now go to car.html with id param) -->
+    <section id="inventory" class="featured">
+        <h2>Featured Vehicles</h2>
+        <div class="car-grid">
+            <p style="text-align: center; padding: 2rem; width: 100%;">Loading vehicles...</p>
+        </div>
+        <!-- Button to full inventory page -->
+        <div style="text-align:center; margin-top:1.5rem;">
+            <a href="inventory.html" class="btn">View Full Inventory</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <h4>About Peak Performance Auto</h4>
+                <p>Your trusted dealership for quality vehicles and transparent service. Experience the drive of your
+                    life.</p>
+            </div>
+
+            <div>
+                <h4>Privacy & Terms</h4>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Contact</h4>
+                <p><i class="fas fa-phone"></i> (514) 402-5556</p>
+                <p><i class="fas fa-envelope"></i> info@peakperformanceauto.ca</p>
+            </div>
+        </div>
+        <p class="copyright">© 2025 Peak Performance Auto. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

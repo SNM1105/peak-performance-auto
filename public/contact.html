@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact – Peak Performance Auto</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img\peak_logo.png" alt="Peak Performance Auto Logo" class="logo-img">
+            </a>
+        </div>
+
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="about.html">Repair</a>
+            <a class="active" href="contact.html">Contact</a>
+        </nav>
+
+        <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="hero" style="background:#000; padding:5rem 2rem; text-align:center;">
+        <h1 style="font-family:'Cairo Play',sans-serif; font-size:3rem; color:#fff; text-transform:uppercase;">
+            Contact Us
+        </h1>
+        <p style="color:#ccc; font-size:1.2rem;">Have questions? Need help reserving a vehicle or booking a repair?</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" style="max-width:1200px; margin:3rem auto; padding:0 1.5rem;">
+        <div class="contact-grid" style="
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:2rem;
+        ">
+
+            <!-- Contact Info -->
+            <div class="contact-info" style="
+                background:#fff;
+                padding:2rem;
+                border-radius:15px;
+                box-shadow:0 5px 20px rgba(0,0,0,0.1);
+            ">
+                <h2 style="font-family:'Cairo Play',sans-serif; margin-bottom:1rem;">Get In Touch</h2>
+                <p style="margin-bottom:1.5rem;">We're here to help with repairs, reservations, and anything else you
+                    need.</p>
+
+                <p><strong>Phone:</strong> (514) 402-5556</p>
+                <p><strong>Email:</strong> info@peakperformanceauto.ca</p>
+                <p><strong>Location:</strong> Montréal, QC</p>
+
+                <hr style="margin:1.5rem 0; border:none; border-top:2px solid #eee;">
+
+                <h3 style="font-family:'Cairo Play',sans-serif; margin-bottom:0.5rem;">Working Hours</h3>
+                <p>Mon–Fri: 9:00am – 7:00pm</p>
+                <p>Saturday: 10:00am – 5:00pm</p>
+                <p>Sunday: Closed</p>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form" style="
+                background:#fff;
+                padding:2rem;
+                border-radius:15px;
+                box-shadow:0 5px 20px rgba(0,0,0,0.1);
+            ">
+                <h2 style="font-family:'Cairo Play', sans-serif; margin-bottom:1rem;">Send a Message</h2>
+
+            <form id="emailForm" action="https://formspree.io/f/mqawznrd" method="POST">
+
+                    <label>Full Name</label>
+                    <input type="text" name="name" required
+                        style="width:100%; padding:0.7rem; border-radius:8px; border:1px solid #ccc; margin-bottom:1rem;">
+
+                    <label>Email</label>
+                    <input type="email" name="email" required
+                        style="width:100%; padding:0.7rem; border-radius:8px; border:1px solid #ccc; margin-bottom:1rem;">
+
+                    <label>Message</label>
+                    <textarea name="message" rows="5" required
+                        style="width:100%; padding:0.7rem; border-radius:8px; border:1px solid #ccc; margin-bottom:1.5rem;"></textarea>
+
+                    <button class="btn" type="submit">Send Message</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Google Map -->
+    <section class="map-section" style="margin-top:3rem;">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.196097091708!2d-73.5673!3d45.5017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a5755d7abc9%3A0xf273ee4cc7f409f!2sMontreal%2C%20QC!5e0!3m2!1sen!2sca!4v1234567890"
+            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <h4>About Peak Performance Auto</h4>
+                <p>Your trusted dealership for quality vehicles and transparent service.</p>
+            </div>
+
+            <div>
+                <h4>Privacy & Terms</h4>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Contact</h4>
+                <p>(514) 402-5556</p>
+                <p>info@peakperformanceauto.ca</p>
+            </div>
+        </div>
+        <p class="copyright">© 2025 Peak Performance Auto. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

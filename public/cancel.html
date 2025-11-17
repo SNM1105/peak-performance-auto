@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Payment Cancelled | Peak Performance Auto</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img\peak_logo.png" alt="Peak Performance Auto Logo" class="logo-img">
+            </a>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="about.html">Repair</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+    </header>
+
+    <!-- Main -->
+    <main style="padding:6rem 1.5rem 3rem; text-align:center;">
+        <section class="cancel-card"
+            style="max-width:900px;margin:0 auto;background:#111;color:#fff;border-radius:12px;padding:2.5rem;box-shadow:0 8px 30px rgba(0,0,0,0.4);">
+            <h1 style="color:#fff;margin-bottom:0.5rem;">Payment Cancelled</h1>
+            <p style="color:#ccc;margin-top:0.5rem;font-size:1.05rem;">Your payment was not completed. No deposit was
+                taken.</p>
+
+            <div id="cancel-details" style="margin-top:1.5rem;color:#fff;">
+                <p>If you were reserving car ID: <strong id="car-id">—</strong>, the car remains available.</p>
+                <p style="color:#bbb;margin-top:0.25rem;">You can try again, view the vehicle, or contact us for
+                    assistance.</p>
+            </div>
+
+            <div style="margin-top:1.8rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+                <a id="retry-btn" class="btn" href="#" style="text-decoration:none;">Try Again</a>
+                <a href="inventory.html" class="btn btn-secondary"
+                    style="text-decoration:none;background:#fff;color:#d00;">Browse Inventory</a>
+                <a href="contact.html" class="btn small"
+                    style="background:transparent;border:1px solid #fff;color:#fff;">Contact Support</a>
+            </div>
+
+            <div style="margin-top:1.4rem;color:#bbb;font-size:0.95rem;">
+                <p>If you need help completing the reservation, email <a href="mailto:simonmedalssy@gmail.com"
+                        style="color:#fff;text-decoration:underline;">simonmedalssy@gmail.com</a> or call (514)
+                    555-0138.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <h4>About Peak Performance Auto</h4>
+                <p>Montreal’s trusted shop for quality service and performance vehicles.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="inventory.html">Inventory</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p><i class="fas fa-phone"></i> (514) 555-0138</p>
+                <p><i class="fas fa-envelope"></i> info@peakperformanceauto.ca</p>
+            </div>
+        </div>
+        <p class="copyright">© 2025 Peak Performance Auto. All rights reserved.</p>
+    </footer>
+
+    <script>
+        (function () {
+            const params = new URLSearchParams(window.location.search);
+            const carId = params.get('carId') || params.get('id');
+            const carIdEl = document.getElementById('car-id');
+            const retryBtn = document.getElementById('retry-btn');
+
+            if (carId) {
+                carIdEl.textContent = carId;
+                retryBtn.href = `car.html?id=${encodeURIComponent(carId)}`;
+            } else {
+                carIdEl.textContent = 'N/A';
+                retryBtn.style.display = 'none';
+            }
+        })();
+    </script>
+</body>
+
+</html>

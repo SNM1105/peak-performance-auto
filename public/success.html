@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Payment Successful | Peak Performance Auto</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Header (same as site) -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img\peak_logo.png" alt="Peak Performance Auto Logo" class="logo-img">
+            </a>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="about.html">Repair</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+    </header>
+
+    <!-- Main -->
+    <main style="padding:6rem 1.5rem 3rem; text-align:center;">
+        <section class="success-card"
+            style="max-width:900px;margin:0 auto;background:#111;color:#fff;border-radius:12px;padding:2.5rem;box-shadow:0 8px 30px rgba(0,0,0,0.4);">
+            <h1 style="color:#d00;margin-bottom:0.5rem;">Payment received — thank you!</h1>
+            <p style="color:#ddd;margin-top:0.5rem;font-size:1.05rem;">Your deposit has been processed successfully.</p>
+
+            <div id="details" style="margin-top:1.5rem;color:#fff;">
+                <p>Reservation for car ID: <strong id="car-id">—</strong></p>
+                <p id="extra-note" style="color:#ccc;margin-top:0.25rem;">We’ve marked this vehicle as <strong>In
+                        Negotiation</strong>. A member of the team will contact you shortly to complete the sale.</p>
+            </div>
+
+            <div style="margin-top:1.8rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+                <a id="view-car" class="btn" href="#" style="text-decoration:none;">View Car</a>
+                <a href="inventory.html" class="btn btn-secondary"
+                    style="text-decoration:none;background:#fff;color:#d00;">Browse Inventory</a>
+                <a href="contact.html" class="btn small"
+                    style="background:transparent;border:1px solid #fff;color:#fff;">Contact Support</a>
+            </div>
+
+            <div style="margin-top:1.4rem;color:#bbb;font-size:0.95rem;">
+                <p>If you don't receive an email confirmation within a few minutes, please check your spam folder or
+                    contact us at <strong>(514) 555-0138</strong> or <a href="mailto:simonmedalssy@gmail.com"
+                        style="color:#fff;text-decoration:underline;">info@peakperformanceauto.ca</a>.</p>
+            </div>
+        </section>
+
+        <!-- Optional: quick facts / next steps -->
+        <section style="max-width:900px;margin:2rem auto 0;color:#222;text-align:left;">
+            <div style="background:#fff;padding:1.3rem;border-radius:10px;">
+                <h3 style="color:#111;margin:0 0 0.5rem;">Next steps</h3>
+                <ul style="margin:0 0 0 1.2rem;color:#444">
+                    <li>Our team will contact you within 24 hours to finalize pickup/delivery.</li>
+                    <li>If you need to cancel or request a refund, call us at (514) 555-0138.</li>
+                    <li>Your deposit will be applied to the final sale price once paperwork is complete.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <h4>About Peak Performance Auto</h4>
+                <p>Montreal’s trusted shop for quality service and performance vehicles.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="inventory.html">Inventory</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p><i class="fas fa-phone"></i> (514) 555-0138</p>
+                <p><i class="fas fa-envelope"></i> info@peakperformanceauto.ca</p>
+            </div>
+        </div>
+        <p class="copyright">© 2025 Peak Performance Auto. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Read URL params and insert the carId (if present)
+        (function () {
+            const params = new URLSearchParams(window.location.search);
+            const carId = params.get('carId') || params.get('carID') || params.get('id');
+            const carIdEl = document.getElementById('car-id');
+            const viewCar = document.getElementById('view-car');
+
+            if (carId) {
+                carIdEl.textContent = carId;
+                viewCar.href = `car.html?id=${encodeURIComponent(carId)}`;
+                viewCar.style.display = 'inline-block';
+            } else {
+                carIdEl.textContent = 'N/A';
+                viewCar.style.display = 'none';
+            }
+
+        })();
+    </script>
+</body>
+
+</html>

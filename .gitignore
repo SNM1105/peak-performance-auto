@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Environment variables (NEVER upload these - they contain your secret keys!)
+.env
+functions/.env
+
+# Local testing files
+functions/
+
+# Vercel
+.vercel
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE files
+.vscode/
+.idea/

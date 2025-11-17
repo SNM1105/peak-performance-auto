@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Repairs | Peak Performance Auto</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img\peak_logo.png" alt="Peak Performance Auto Logo" class="logo-img">
+            </a>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="about.html" class="active">Repair</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="about-container">
+            <h1>Peak Performance Auto Repairs</h1>
+            <p>
+                At <strong>Peak Performance Auto</strong>, we go beyond repairs — we bring cars back to life.
+                From general maintenance to full on repairs, our certified mechanics ensure
+                every vehicle receives precision care.
+            </p>
+        </div>
+    </section>
+
+<!-- Services & Pricing -->
+<section class="services">
+
+<h2>Our Packages</h2>
+<div class="service-grid">
+
+    <div class="service-card">
+        <img src="img\about-img\repair-shop.png" alt="">
+        <h3>Essential Protection Package</h3>
+        <p><strong>$199.99</strong></p>
+        <p>Tire Change</p>
+        <p>Anti-Rust Treatment</p>
+        <p>Complete Wash (Interior & Exterior)</p>
+    </div>
+
+    <div class="service-card best-deal">
+        <div class="deal-badge">Best Value Deal</div>
+        <img src="img\about-img\car.png" alt="">
+        <h3>Premium Tire Season Package</h3>
+        <p><strong>$249.99</strong></p>
+        <p>Tire Change</p>
+        <p>Full Synthetic Oil Change W/ Filter</p>
+        <p>Anti-Rust Treatment</p>
+        <p>Complete Wash (Interior & Exterior)</p>
+    </div>
+
+
+</div>
+
+    <h2>Our Services & Pricing</h2>
+    <div class="service-grid">
+
+        <div class="service-card">
+            <img src="img/about-img/construction.png" alt="Repair Icon">
+            <h3>Repairs</h3>
+            <p>Ask for <strong>Pricing</strong></p>
+        </div>
+
+        <div class="service-card">
+            <img src="img/about-img/wheel.png" alt="Tire Icon">
+            <h3>Tire Change</h3>
+            <p>From <strong>$80</strong></p>
+        </div>
+
+        <div class="service-card">
+            <img src="img/about-img/engine-oil.png" alt="Oil Change Icon">
+            <h3>Full Synthetic Oil Change W/ Filter</h3>
+            <p>From <strong>$80</strong></p>
+        </div>
+
+        <div class="service-card">
+            <img src="img/about-img/inspection.png" alt="Inspection Icon">
+            <h3>Vehicle Inspection</h3>
+            <p><strong>$50</strong> General Inspection</p>
+            <p>Ask for <strong>Pricing</strong> for Detailed Inspection</p>
+        </div>
+
+        <div class="service-card">
+            <img src="img/about-img/alignment.png" alt="Alignment Icon">
+            <h3>Wheel Alignment</h3>
+            <p>From <strong>$100</strong></p>
+        </div>
+
+        <div class="service-card">
+            <img src="img/about-img/rust.png" alt="Anti-Rust Icon">
+            <h3>Anti-Rust Treatment</h3>
+            <p>From <strong>$120</strong></p>
+        </div>
+
+    </div>
+
+    <!-- Book button inside this section -->
+    <div style="text-align:center; margin-top:2rem;">
+        <button class="btn" id="book-btn">Book an Appointment</button>
+    </div>
+    </section>
+    
+    <!-- Location Section -->
+    <section class="location">
+        <h2>Find Us</h2>
+        <p>We’re conveniently located in Montreal, Quebec.</p>
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3339.8944418855885!2d-73.6926201!3d45.
+                485773699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc917c0b6b2874f%3A0x7b708463b1772ee9!2sPeak%
+                20Performance%20Auto!5e1!3m2!1sen!2sca!4v1762729829323!5m2!1sen!2sca"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    
+    <!-- Contact Popup -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" id="close-popup">&times;</span>
+            <h2>Book an Appointment</h2>
+            <p><i class="fas fa-phone"></i> Call us at: <strong>(514) 555-0138</strong></p>
+    
+            <!-- Formspree email form -->
+            <form id="emailForm" action="https://formspree.io/f/mqawznrd" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email</label>
+                <input type="email" id="email" name="_replyto" required>
+    
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4"
+                    placeholder="What service would you like to book?"></textarea>
+    
+                <button type="submit" class="btn">Send Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <h4>About Peak Performance Auto</h4>
+                <p>Montreal’s trusted shop for quality service and performance vehicles.</p>
+            </div>
+
+            <div>
+                <h4>Privacy & Terms</h4>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Contact</h4>
+                <p><i class="fas fa-phone"></i> (514) 402-5556</p>
+                <p><i class="fas fa-envelope"></i> info@peakperformanceauto.ca</p>
+            </div>
+        </div>
+        <p class="copyright">© 2025 Peak Performance Auto. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
