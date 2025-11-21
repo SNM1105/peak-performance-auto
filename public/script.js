@@ -1,9 +1,15 @@
 // ===== MOBILE MENU TOGGLE =====
 const menuToggle = document.getElementById("mobile-menu");
+const navClose = document.getElementById("nav-close");
 const nav = document.querySelector(".nav");
 if (menuToggle) {
   menuToggle.addEventListener("click", () => {
     nav.classList.toggle("active");
+  });
+}
+if (navClose) {
+  navClose.addEventListener("click", () => {
+    nav.classList.remove("active");
   });
 }
 

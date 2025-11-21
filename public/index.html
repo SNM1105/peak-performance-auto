@@ -20,10 +20,16 @@
             </a>
         </div>
         <nav class="nav">
-            <a href="index.html">Home</a>
-            <a href="inventory.html">Inventory</a>
-            <a href="about.html">Repair</a>
-            <a href="contact.html">Contact</a>
+            <button class="nav-close" id="nav-close">&times;</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="inventory.html">Inventory</a>
+                <a href="about.html">Repair</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-footer">
+                <img src="img\peak_logo.png" alt="Peak Performance Auto" class="logo-img">
+            </div>
         </nav>
         <div class="menu-toggle" id="mobile-menu">&#9776;</div>
     </header>
@@ -33,17 +39,53 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1>
-                    <span>Find Your Next Vehicle</span>
-                    <span>Repair Your Car</span>
+                    <span>Expert Auto Repair</span>
+                    <span>Quality Vehicles</span>
                 </h1>
-                <p>Browse our selection of cars available for reservation</p>
-                <p>Schedule your service appointment with our expert mechanics</p>
-                <!-- now links to the separate inventory page -->
-                <a href="inventory.html" class="btn">VIEW INVENTORY</a>
-                <a href="about.html" class="btn">BOOK A SERVICE</a>
+                <p class="hero-lead">Professional mechanics keeping your vehicle running at peak performance</p>
+                <div class="hero-buttons">
+                    <a href="about.html" class="btn btn-primary">BOOK A REPAIR</a>
+                    <a href="inventory.html" class="btn btn-secondary">VIEW INVENTORY</a>
+                </div>
             </div>
             <div class="hero-image">
-                <img src="img\peak_logo.png" alt="logo">
+                <img src="img\peak_logo.png" alt="Peak Performance Auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="services-preview">
+        <div class="services-container">
+            <h2>Our Auto Repair Services</h2>
+            <p class="section-intro">Expert maintenance and repairs to keep your vehicle running at its best</p>
+            <p class="scroll-hint">← Swipe to see all services →</p>
+            
+            <div class="services-grid">
+                <div class="service-item">
+                    <img src="img/about-img/construction.png" alt="Repair Icon" class="service-icon-img">
+                    <h3>General Repairs</h3>
+                    <p>Expert diagnostics and repairs for all makes and models</p>
+                </div>
+                <div class="service-item">
+                    <img src="img/about-img/wheel.png" alt="Tire Icon" class="service-icon-img">
+                    <h3>Tire Services</h3>
+                    <p>Tire changes, alignment, and seasonal tire swaps</p>
+                </div>
+                <div class="service-item">
+                    <img src="img/about-img/engine-oil.png" alt="Oil Icon" class="service-icon-img">
+                    <h3>Oil Changes</h3>
+                    <p>Full synthetic oil changes with filter replacement</p>
+                </div>
+                <div class="service-item">
+                    <img src="img/about-img/inspection.png" alt="Inspection Icon" class="service-icon-img">
+                    <h3>Inspections</h3>
+                    <p>Comprehensive vehicle inspections and safety checks</p>
+                </div>
+            </div>
+            
+            <div style="text-align:center; margin-top:2rem;">
+                <a href="about.html" class="btn">View All Services & Pricing</a>
             </div>
         </div>
     </section>
@@ -51,8 +93,9 @@
     <!-- Featured Cars (links now go to car.html with id param) -->
     <section id="inventory" class="featured">
         <h2>Featured Vehicles</h2>
-        <div class="car-grid">
-            <p style="text-align: center; padding: 2rem; width: 100%;">Loading vehicles...</p>
+        <p class="scroll-hint">← Swipe to browse vehicles →</p>
+        <div class="car-grid car-grid-3">
+            <p style="text-align: center; padding: 2rem; width: 100%; grid-column: 1 / -1;">Loading vehicles...</p>
         </div>
         <!-- Button to full inventory page -->
         <div style="text-align:center; margin-top:1.5rem;">
@@ -60,13 +103,66 @@
         </div>
     </section>
 
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="why-container">
+            <h2>Why Choose Peak Performance Auto?</h2>
+            <p class="scroll-hint">← Swipe to see all benefits →</p>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>✓ Certified Mechanics</h3>
+                    <p>Our experienced technicians are trained to handle all vehicle repairs with precision and care</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>✓ Quality Parts</h3>
+                    <p>We use only high-quality parts and fluids to ensure your vehicle runs at peak performance</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>✓ Transparent Pricing</h3>
+                    <p>No hidden fees or surprises - we provide clear, upfront pricing for all our services</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>✓ Fast Service</h3>
+                    <p>Most repairs completed same-day or next-day to get you back on the road quickly</p>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:2.5rem;">
+                <a href="contact.html" class="btn btn-cta">Schedule Your Service Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="testimonials-container">
+            <h2>What Our Customers Say</h2>
+            <p class="scroll-hint">← Swipe to read reviews →</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Excellent service! They fixed my car quickly and the price was very fair. The mechanics really know what they're doing."</p>
+                    <p class="testimonial-author">- Sarah M.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Best auto shop in Montreal. Honest, reliable, and they always explain what needs to be done. Highly recommend!"</p>
+                    <p class="testimonial-author">- Michael T.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Great experience buying a used car here. It was thoroughly inspected and runs perfectly. Their service is top-notch."</p>
+                    <p class="testimonial-author">- Jessica L.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <div>
-                <h4>About Peak Performance Auto</h4>
-                <p>Your trusted dealership for quality vehicles and transparent service. Experience the drive of your
-                    life.</p>
+                <h4>Peak Performance Auto</h4>
+                <p>Expert auto repair and maintenance services. Quality pre-owned vehicles.</p>
             </div>
 
             <div>

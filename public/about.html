@@ -18,10 +18,16 @@
             </a>
         </div>
         <nav class="nav">
-            <a href="index.html">Home</a>
-            <a href="inventory.html">Inventory</a>
-            <a href="about.html" class="active">Repair</a>
-            <a href="contact.html">Contact</a>
+            <button class="nav-close" id="nav-close">&times;</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="inventory.html">Inventory</a>
+                <a href="about.html">Repair</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-footer">
+                <img src="img\peak_logo.png" alt="Peak Performance Auto" class="logo-img">
+            </div>
         </nav>
         <div class="menu-toggle" id="mobile-menu">&#9776;</div>
     </header>
@@ -29,41 +35,49 @@
     <!-- About Section -->
     <section class="about">
         <div class="about-container">
-            <h1>Peak Performance Auto Repairs</h1>
+            <h1>Expert Auto Repair & Maintenance</h1>
             <p>
-                At <strong>Peak Performance Auto</strong>, we go beyond repairs — we bring cars back to life.
-                From general maintenance to full on repairs, our certified mechanics ensure
-                every vehicle receives precision care.
+                At <strong>Peak Performance Auto</strong>, we're dedicated to keeping your vehicle running at its best.
+                From routine maintenance to comprehensive repairs, our certified mechanics deliver precision care
+                and reliable service you can count on.
             </p>
+        </div>
+        <div style="text-align:center; margin-top:2rem;">
+            <button class="btn" id="book-btn">Book an Appointment</button>
         </div>
     </section>
 
 <!-- Services & Pricing -->
 <section class="services">
 
-<h2>Our Packages</h2>
-<div class="service-grid">
+<h2>Our Service Packages</h2>
+<p style="text-align:center; color:#666; max-width:700px; margin:0 auto 2rem;">Save with our seasonal maintenance packages</p>
+<div class="service-grid packages-grid packages-centered">
 
-    <div class="service-card">
+    <div class="service-card package-card">
+        <div class="package-badge">Popular</div>
         <img src="img\about-img\repair-shop.png" alt="">
         <h3>Essential Protection Package</h3>
-        <p><strong>$199.99</strong></p>
-        <p>Tire Change</p>
-        <p>Anti-Rust Treatment</p>
-        <p>Complete Wash (Interior & Exterior)</p>
+        <p class="package-price"><strong>$199.99</strong></p>
+        <ul class="package-features">
+            <li>✓ Tire Change</li>
+            <li>✓ Anti-Rust Treatment</li>
+            <li>✓ Complete Wash (Interior & Exterior)</li>
+        </ul>
     </div>
 
-    <div class="service-card best-deal">
-        <div class="deal-badge">Best Value Deal</div>
+    <div class="service-card package-card best-deal">
+        <div class="deal-badge">Best Value</div>
         <img src="img\about-img\car.png" alt="">
         <h3>Premium Tire Season Package</h3>
-        <p><strong>$249.99</strong></p>
-        <p>Tire Change</p>
-        <p>Full Synthetic Oil Change W/ Filter</p>
-        <p>Anti-Rust Treatment</p>
-        <p>Complete Wash (Interior & Exterior)</p>
+        <p class="package-price"><strong>$249.99</strong></p>
+        <ul class="package-features">
+            <li>✓ Tire Change</li>
+            <li>✓ Full Synthetic Oil Change W/ Filter</li>
+            <li>✓ Anti-Rust Treatment</li>
+            <li>✓ Complete Wash (Interior & Exterior)</li>
+        </ul>
     </div>
-
 
 </div>
 
@@ -113,6 +127,11 @@
     <div style="text-align:center; margin-top:2rem;">
         <button class="btn" id="book-btn">Book an Appointment</button>
     </div>
+    
+    <!-- Cross-promotion -->
+    <div style="text-align:center; margin-top:2rem; padding:1.5rem; background:#f9f9f9; border-radius:10px; max-width:800px; margin-left:auto; margin-right:auto;">
+        <p style="color:#666; font-size:0.95rem;">Looking for a reliable vehicle? <a href="inventory.html" style="color:#d00; font-weight:bold; text-decoration:underline;">Check out our quality pre-owned cars</a> — all inspected and serviced by our team.</p>
+    </div>
     </section>
     
     <!-- Location Section -->
@@ -158,7 +177,7 @@
         <div class="footer-container">
             <div>
                 <h4>About Peak Performance Auto</h4>
-                <p>Montreal’s trusted shop for quality service and performance vehicles.</p>
+                <p>Your trusted auto repair shop for expert maintenance and repairs. We also offer quality pre-owned vehicles for sale.</p>
             </div>
 
             <div>

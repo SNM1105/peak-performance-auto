@@ -16,16 +16,29 @@
             </a>
         </div>
         <nav class="nav">
-            <a href="index.html">Home</a>
-            <a href="inventory.html" class="active">Inventory</a>
-            <a href="about.html">Repair</a>
-            <a href="contact.html">Contact</a>
+            <button class="nav-close" id="nav-close">&times;</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="inventory.html">Inventory</a>
+                <a href="about.html">Repair</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-footer">
+                <img src="img\peak_logo.png" alt="Peak Performance Auto" class="logo-img">
+            </div>
         </nav>
         <div class="menu-toggle" id="mobile-menu">&#9776;</div>
     </header>
 
     <section class="inventory-page">
-        <h1>Available Cars</h1>
+        <h1>Quality Pre-Owned Vehicles</h1>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 1rem; color: #666;">Browse our selection of inspected and serviced vehicles. Each car has been thoroughly checked by our expert mechanics.</p>
+        
+        <!-- Cross-promotion for repair services -->
+        <div style="text-align:center; margin:1rem auto 2rem; padding:1rem; background:#f9f9f9; border-radius:10px; max-width:700px;">
+            <p style="color:#666; font-size:0.95rem;">Need repairs or maintenance? <a href="about.html" style="color:#d00; font-weight:bold; text-decoration:underline;">Book a service appointment</a> with our certified mechanics.</p>
+        </div>
+        
         <div class="car-grid" id="inventory-list">
             <!-- JavaScript will dynamically populate this from Supabase -->
             <p style="text-align: center; padding: 2rem; width: 100%;">Loading vehicles...</p>
@@ -36,7 +49,7 @@
         <div class="footer-container">
             <div>
                 <h4>About Peak Performance Auto</h4>
-                <p>Your trusted dealership for quality vehicles and transparent service.</p>
+                <p>Your trusted auto repair shop for expert maintenance and repairs. We also offer quality pre-owned vehicles for sale.</p>
             </div>
 
             <div>
