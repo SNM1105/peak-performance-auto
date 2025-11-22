@@ -303,21 +303,23 @@ async function loadCarDetails() {
 // ===== CONTACT POPUP FUNCTIONALITY =====
 document.addEventListener("DOMContentLoaded", () => {
   const popup = document.getElementById("popup");
-  const openBtn = document.getElementById("book-btn");
+  const openBtns = document.querySelectorAll(".book-appointment-btn");
   const closeBtn = document.getElementById("close-popup");
   const emailForm = document.getElementById("emailForm");
 
   if (!popup) return;
 
-  if (openBtn) {
-    openBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      popup.style.display = "flex";
-      const firstInput = popup.querySelector("input, textarea, button");
-      if (firstInput) firstInput.focus();
-      document.body.style.overflow = "hidden";
-    });
-  }
+  openBtns.forEach(openBtn => {
+    if (openBtn) {
+      openBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        popup.style.display = "flex";
+        const firstInput = popup.querySelector("input, textarea, button");
+        if (firstInput) firstInput.focus();
+        document.body.style.overflow = "hidden";
+      });
+    }
+  });
 
   if (closeBtn) {
     closeBtn.addEventListener("click", () => {
