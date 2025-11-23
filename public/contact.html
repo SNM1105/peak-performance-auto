@@ -36,7 +36,7 @@
     </header>
 
     <!-- Contact Hero -->
-    <section class="hero" style="background:#000; padding:5rem 2rem; text-align:center;">
+    <section class="hero">
         <h1 style="font-family:'Cairo Play',sans-serif; font-size:3rem; color:#fff; text-transform:uppercase;">
             Contact Us
         </h1>
@@ -53,50 +53,52 @@
 
             <!-- Contact Info -->
             <div class="contact-info" style="
-                background:#fff;
+                background:rgba(30, 30, 30, 0.85);
+                border:1px solid rgba(255, 255, 255, 0.1);
                 padding:2rem;
                 border-radius:15px;
-                box-shadow:0 5px 20px rgba(0,0,0,0.1);
+                box-shadow:0 5px 20px rgba(0,0,0,0.3);
             ">
-                <h2 style="font-family:'Cairo Play',sans-serif; margin-bottom:1rem;">Get In Touch</h2>
-                <p style="margin-bottom:1.5rem;">We're here to help with auto repairs, vehicle maintenance, and any questions about our services or available vehicles.</p>
+                <h2 style="font-family:'Cairo Play',sans-serif; margin-bottom:1rem; color:#cecece;">Get In Touch</h2>
+                <p style="margin-bottom:1.5rem; color:#cecece;">We're here to help with auto repairs, vehicle maintenance, and any questions about our services or available vehicles.</p>
 
-                <p><strong>Phone:</strong> (514) 402-5556</p>
-                <p><strong>Email:</strong> info@peakperformanceauto.ca</p>
-                <p><strong>Location:</strong> Montréal, QC</p>
+                <p style="color:#cecece;"><strong>Phone:</strong> (514) 402-5556</p>
+                <p style="color:#cecece;"><strong>Email:</strong> info@peakperformanceauto.ca</p>
+                <p style="color:#cecece;"><strong>Location:</strong> Montréal, QC</p>
 
-                <hr style="margin:1.5rem 0; border:none; border-top:2px solid #eee;">
+                <hr style="margin:1.5rem 0; border:none; border-top:2px solid rgba(255, 255, 255, 0.1);">
 
-                <h3 style="font-family:'Cairo Play',sans-serif; margin-bottom:0.5rem;">Working Hours</h3>
-                <p>Mon–Fri: 9:00am – 7:00pm</p>
-                <p>Saturday: 10:00am – 5:00pm</p>
-                <p>Sunday: Closed</p>
+                <h3 style="font-family:'Cairo Play',sans-serif; margin-bottom:0.5rem; color:#cecece;">Working Hours</h3>
+                <p style="color:#cecece;">Mon–Fri: 9:00am – 7:00pm</p>
+                <p style="color:#cecece;">Saturday: 10:00am – 5:00pm</p>
+                <p style="color:#cecece;">Sunday: Closed</p>
             </div>
 
             <!-- Contact Form -->
             <div class="contact-form" style="
-                background:#fff;
+                background:rgba(30, 30, 30, 0.85);
+                border:1px solid rgba(255, 255, 255, 0.1);
                 padding:2rem;
                 border-radius:15px;
-                box-shadow:0 5px 20px rgba(0,0,0,0.1);
+                box-shadow:0 5px 20px rgba(0,0,0,0.3);
             ">
-                <h2 style="font-family:'Cairo Play', sans-serif; margin-bottom:1rem;">Send a Message</h2>
+                <h2 style="font-family:'Cairo Play', sans-serif; margin-bottom:1rem; color:#cecece;">Send a Message</h2>
 
             <form id="emailForm" action="https://formspree.io/f/mqawznrd" method="POST">
 
-                    <label>Full Name</label>
+                    <label style="color:#cecece;">Full Name</label>
                     <input type="text" name="name" required
                         style="width:100%; padding:0.7rem; border-radius:8px; border:1px solid #ccc; margin-bottom:1rem;">
 
-                    <label>Email</label>
+                    <label style="color:#cecece;">Email</label>
                     <input type="email" name="email" required
                         style="width:100%; padding:0.7rem; border-radius:8px; border:1px solid #ccc; margin-bottom:1rem;">
 
-                    <label>Phone Number</label>
+                    <label style="color:#cecece;">Phone Number</label>
                     <input type="tel" name="phone" placeholder="(555) 123-4567" required
                         style="width:100%; padding:0.7rem; border-radius:8px; border:1px solid #ccc; margin-bottom:1rem;">
 
-                    <label>Message</label>
+                    <label style="color:#cecece;">Message</label>
                     <textarea name="message" rows="5" required
                         style="width:100%; padding:0.7rem; border-radius:8px; border:1px solid #ccc; margin-bottom:1.5rem;"></textarea>
 
@@ -121,8 +123,8 @@
     <footer class="footer">
         <div class="footer-container">
             <div>
-                <h4>About Peak Performance Auto</h4>
-                <p>Your trusted auto repair shop for expert maintenance and repairs. We also offer quality pre-owned vehicles for sale.</p>
+                <h4>Peak Performance Auto</h4>
+                <p>Expert auto repair and maintenance services. Quality pre-owned vehicles.</p>
             </div>
 
             <div>
@@ -136,8 +138,8 @@
 
             <div>
                 <h4>Contact</h4>
-                <p>(514) 402-5556</p>
-                <p>info@peakperformanceauto.ca</p>
+                <p><i class="fas fa-phone"></i> (514) 402-5556</p>
+                <p><i class="fas fa-envelope"></i> info@peakperformanceauto.ca</p>
             </div>
         </div>
         <p class="copyright">© 2025 Peak Performance Auto. All rights reserved.</p>
