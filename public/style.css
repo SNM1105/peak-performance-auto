@@ -975,16 +975,16 @@ h1, h2, h3, h4, h5, h6 {
 .car-primary-info {
     margin-top: 1.5rem;
     padding: 2rem;
-    background: #f9f9f9;
+    background: rgba(30, 30, 30, 0.85);
     border-radius: 10px;
     text-align: center;
-    border: 2px solid #e8e8e8;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .car-primary-info h1 {
     font-size: 2rem;
     margin: 0 0 1.5rem 0;
-    color: #222;
+    color: #cecece;
     word-wrap: break-word;
     font-weight: 700;
 }
@@ -999,7 +999,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .car-primary-info .deposit-info {
     font-size: 1.3rem;
-    color: #666;
+    color: #8a8a8a;
     margin: 0 0 1.5rem 0;
     font-weight: 500;
 }
